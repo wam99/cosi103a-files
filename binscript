@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Hello World"
+echo "Here are the /bin commands:"
+ls /bin
+echo 'Goodbye'

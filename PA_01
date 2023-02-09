@@ -1,0 +1,56 @@
+#!/bin/bash
+
+
+# navigation using bash
+# ssh  -oHostKeyAlgorithms=+ssh-rsa wam99@tiara.cs.brandeis.edu
+# cd /
+# ls -a
+# cd ~
+# ls -a
+# cd ..
+# ls
+# exit
+
+
+# argument expansion in bash
+# ssh  -oHostKeyAlgorithms=+ssh-rsa wam99@tiara.cs.brandeis.edu
+# mkdir pa01
+# cd pa01
+# mkdir alumni{1975..2022}
+# touch alumni{1975..2022}/{ba,bs,ms,phd}.txt
+# rm alumni{1975..1982}/ms.txt
+# mkdir recentAlumni
+# mv alumni{2018..2022} recentAlumni
+# cd ~
+# rm -rf pa01
+
+
+# Redirection and Pipes
+# ssh  -oHostKeyAlgorithms=+ssh-rsa wam99@tiara.cs.brandeis.edu
+# tail -1000 /usr/share/dict/words | head -5 > words2.txt
+# du -a /usr/share | wc -l
+# du -sh /usr/share
+
+
+# Permissions in linux
+# mkdir demo1
+# touch demo1/profile{000..100}
+# chmod 777 demo1/profile{000..100}
+
+# chmod -R go-rwx .
+
+# chmod 664 words2.txt
+
+
+# Process Control
+# mongod > dbout.txt 2> dberr.txt &
+
+# jobs 
+#     # [1]+ Running              nodemon &
+# fg %1
+# ^C
+
+
+# Regular Expressions
+# grep -E '(boston|nyc|sanfran)\.[a-z]{2,}\.[a-z]{2,}@companyA.com$' secretnotes.txt
+# grep -E '(boston|nyc|sanfran)\.[a-z]{2,}(\.[a-z]{2,})?\.[a-z]{2,}@companyA.com$' secretnotes.txt
