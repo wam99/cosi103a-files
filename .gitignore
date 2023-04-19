@@ -1,0 +1,15 @@
+.DS_Store
+*~
+pa??
+package-lock*
+my*
+node_modules
+secret*
+*data*
+courses*
+__pycache__
+.ipynb_checkpoints
+.pytest_cache
+images
+startup.sh
+grading
