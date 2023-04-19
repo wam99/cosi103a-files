@@ -38,22 +38,22 @@ router.get('/transactions/',
                         .sort({completed:1,priority:1,createdAt:1})
 
       }
-            res.render('toDoList',{items,show,completed});
+            res.render('transactionList',{items,show,completed});
 });
 
 /* add the value in the body to the list associated to the key */
 router.post('/transactions',
   isLoggedIn,
   async (req, res, next) => {
-      const todo = new ToDoItem(
+      const transaction = new TransactionItem(
         {item:req.body.item,
          createdAt: new Date(),
          completed: false,
          priority: parseInt(req.body.priority),
          userId: req.user._id
         })
-      await todo.save();
-      res.redirect('/todo')
+      await transaction.save();
+      res.redirect('/transactions')
 });
 
 module.exports = router;
