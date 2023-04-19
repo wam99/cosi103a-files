@@ -8,8 +8,8 @@ var transactionItemSchema = Schema( {
   description: String,
   amount: Number,
   category: String,
-  date: String,
-  userId: {type:ObjectId, ref:'user' }
+  date: Date,
+  userId: ObjectId,// {type:ObjectId, ref:'user' }
 } );
 
 module.exports = mongoose.model( 'TransactionItem', transactionItemSchema );
