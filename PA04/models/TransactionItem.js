@@ -5,10 +5,10 @@ const Schema = mongoose.Schema;
 const ObjectId = mongoose.Schema.Types.ObjectId;
 
 var transactionItemSchema = Schema( {
-  item: String,
-  completed: Boolean,
-  createdAt: Date,
-  priority: Number,
+  description: String,
+  amount: Number,
+  category: String,
+  date: String,
   userId: {type:ObjectId, ref:'user' }
 } );
 

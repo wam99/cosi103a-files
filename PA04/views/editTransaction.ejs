@@ -1,0 +1,18 @@
+<body>
+    <h1>Edit Transaction</h1><br>
+    <h2>Current Data:</h2>
+    <p>Description: <%= item.description %></p>
+    <p>Amount: <%= item.amount %></p>
+    <p>Category: <%= item.category %></p>
+    <p>Date: <%= item.date %></p>
+    <br>
+    <h2>Update Data:</h2>
+    <form method="post" action="/transactions/updateTransactionItem">
+        <input type="hidden" name="itemId" value="<%= item._id %>">
+        <input type="text" name="description" placeholder="description"><br>
+        <input type="text" name="amount" placeholder="amount"><br>
+        <input type="text" name="category" placeholder="category"><br>
+        <input type="text" name="date" placeholder="mm/dd/yyyy"><br>
+        <input type="submit" value="store">
+    </form>
+</body>
