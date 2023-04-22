@@ -1,5 +1,5 @@
 /*
-  todo.js -- Router for the ToDoList
+  transactions.js -- Router for the TransactionList
 */
 const express = require('express');
 const router = express.Router();
